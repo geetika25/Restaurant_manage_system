@@ -10,6 +10,8 @@
 ## A step by step series of examples that tell you how to get a development env running
 # Configuring Python virtual environment
 ### PyCharm makes it possible to create a virtual environment using the virtualenv tool. 
+### when to install the python interpreter and create a virtual envirment ,Let’s start our project: 
+# Restaurant Management System.
 
 
 

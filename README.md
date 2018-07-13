@@ -14,15 +14,15 @@
 # Restauro system
 ![first](images/first.png)
 # Step 1. Go to menu to select the food/meal,select the particular foot item.
-![step1](images/s1.png)
+![step1](images/step1.png)
 # Step 2. click on reset to clear the previous amount,in case in run the system previously.
-![step2](images/s2.png)
+![step2](images/step2.png)
 # Step 3. Fill the food entry.
-![step3](images/s3.png)
+![step3](images/step3.png)
 # Step 4. Click on Total in order to calculate the meal cost.
-![step4](images/s4.png)
+![step4](images/step4.png)
 # Here you can calculate the meal cost total cost and reset the system to calaculate other cost meal
-![step5](images/s5.png)
+![step5](images/step5.png)
 
 
 ## Acknowledgments

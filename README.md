@@ -14,7 +14,7 @@
 # Restaurant Management System.
 
 
-
+![step1](images/s1.png)
 
 ## Acknowledgments
 ### i would like to thanks !my instructor Aishwary Holkar,Mukesh Dubey,Rahul chaudhary,for giving guidence,Inspiration.

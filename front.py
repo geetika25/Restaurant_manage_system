@@ -1,19 +1,10 @@
+#import tkinter
 from tkinter import *
+#import random
 import random
+#import time
 import time
 
-
-class calculation:
-    def __init__(self):
-        self.a = 10
-        self.b = 20
-        self.c = None
-
-    def add(self):
-        self.c = self.a + self.b
-        print(self.c)
-
-c = calculation()
 
 costofmeals=0.0
 paidtax=0.0
@@ -299,6 +290,7 @@ def show():
     label_50.place(x=750, y=480)
 
     label_51 = Label(frame_1, text="97", bg="lightcoral", fg="black", font=("arial", 12, "bold"))
+    label_51.place(x=750, y=510)
     ########################################################################################################################
 
     # _______-_________________string var (entry 1)_____-______--
@@ -615,48 +607,47 @@ hot = IntVar()
 f1=Frame(root,width=1400,height=100,relief=SUNKEN)
 f1.pack(side=TOP)
 
-frame_2=Frame(root,bg="pink",width=1400,height=680,relief=SUNKEN)
+frame_2=Frame(root,bg="lightcoral",width=1400,height=680,relief=SUNKEN)
 frame_2.pack(side=LEFT)
 
 frame1 = Frame(root,width=300,height=800,bg="cornflowerblue")
 # split=0.3
 frame1.place(x=0,y=100)
 
-frame=Frame(root,width=300,height=100,bd=5)
-frame.place(x=0,y=575)
+
 
 ########################################################################################################################
-label_1=Label(root,text="Restauro",font=("arial",60,'bold','italic'),fg='navyblue')
+label_1=Label(root,text="Restauro",font=("arial",60,'bold','italic'),fg='black')
 label_1.place(x=110,y=0)
 
-canvas=Canvas(root,width=400,height=100,bd=5,bg="navyblue")
-canvas.place(x=500,y=0)
-my_image=PhotoImage(file='C:\\Users\\atc\\Desktop\\download\\download.png')
+canvas=Canvas(root,width=450,height=100,bd=3,bg="pink")
+canvas.place(x=480,y=0)
+my_image=PhotoImage(file='pictures\download.png')
 canvas.create_image(0,0,anchor=NW,image=my_image)
 
 #label number two
-label_2=Label(root,text="System",font=("arial",60,'bold','italic'),fg="navyblue")
+label_2=Label(root,text="System",font=("arial",60,'bold','italic'),fg="black")
 label_2.place(x=950,y=0)
 ########################################################################################################################
-label=Label(frame_2,text='Order No.',font=('arial',20,"bold"),fg="navyblue",bg="pink")
+label=Label(frame_2,text='Order No.',font=('arial',20,"bold"),fg="white",bg="lightcoral")
 label.place(x=300,y=50)
 
 
-label_0=Label(frame_2,text='Cost of Meals',font=('arial',20,"bold"),fg="navyblue",bg="pink")
+label_0=Label(frame_2,text='Cost of Meals',font=('arial',20,"bold"),fg="white",bg="lightcoral")
 label_0.place(x=300,y=120)
 
 
-label_1=Label(frame_2,text='Service Charges',font=('arial',20,"bold"),fg="navyblue",bg="pink")
+label_1=Label(frame_2,text='Service Charges',font=('arial',20,"bold"),fg="white",bg="lightcoral")
 label_1.place(x=300,y=190)
 
-label_2=Label(frame_2,text='Tax',font=('arial',20,"bold"),fg="navyblue",bg="pink")
+label_2=Label(frame_2,text='Tax',font=('arial',20,"bold"),fg="white",bg="lightcoral")
 label_2.place(x=300,y=260)
 
 
-label_3=Label(frame_2,text='Sub Total',font=('arial',20,"bold"),fg="navyblue",bg="pink")
+label_3=Label(frame_2,text='Sub Total',font=('arial',20,"bold"),fg="white",bg="lightcoral")
 label_3.place(x=300,y=330)
 
-label_4=Label(frame_2,text='Total Cost',font=('arial',20,"bold"),fg="navyblue",bg="pink")
+label_4=Label(frame_2,text='Total Cost',font=('arial',20,"bold"),fg="white",bg="lightcoral")
 label_4.place(x=300,y=400)
 
 rand=StringVar()
@@ -697,9 +688,9 @@ def btnClear():
     text_input.set(operator)
 
 #function defination here (click)
-def btnClick(numbers):
+def btnClick (numbers):
  global operator
- operator=operator+str(numbers)
+ operator = operator+str(numbers)
  text_input.set(operator)
 
 # function defination (equal function)
@@ -711,28 +702,28 @@ def btnEquals():
 #--------------------------------------buttons in calculator------------------------------------------------------------------------------------------
 
 #button 7
-button7=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='7',command=lambda:btnClick(7))
+button7 = Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='7',command=lambda:btnClick(7))
 button7.grid(row=1,column=0)
 #botton 8
-button8=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='8',command=lambda:btnClick(8))
+button8 = Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='8',command=lambda:btnClick(8))
 button8.grid(row=1,column=1)
 #botton 9
-button9=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='9',command=lambda:btnClick(9))
+button9 = Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='9',command=lambda:btnClick(9))
 button9.grid(row=1,column=2)
 #botton add
 buttonAdd=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='+',command=lambda:btnClick("+"))
 buttonAdd.grid(row=1,column=3)
 #botton 4
-button4=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='4',command=lambda:btnClick(4))
+button4 = Button(frame1 , bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='4',command=lambda:btnClick(4))
 button4.grid(row=2,column=0)
 #botton 5
-button5=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='5',command=lambda:btnClick(5))
+button5 = Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='5',command=lambda:btnClick(5))
 button5.grid(row=2,column=1)
 #botton 6
-button6=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='6',command=lambda:btnClick(6))
+button6 = Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='6',command=lambda:btnClick(6))
 button6.grid(row=2,column=2)
 #botton -
-buttonSub=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='-',command=lambda:btnClick("-"))
+buttonSub = Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='-',command=lambda:btnClick("-"))
 buttonSub.grid(row=2,column=3)
 #botton 1
 button1=Button(frame1,bg="white",padx=20,pady=20,bd=1,fg="black",width=2,font=("arial",15,"bold"),text='1',command=lambda:btnClick(1))
@@ -775,24 +766,28 @@ def Reset():
     SUB.set("")
     TC.set("")
 ########################################################################################################################
-ButtonCOUNT=Button(frame_2,text="Order No",bg="seashell",font=("arial",20,"bold"),fg="navyblue",width=10,height=1,bd=1,command=Ref)
+ButtonCOUNT=Button(frame_2,text="Order No",bg="seashell",font=("arial",20,"bold"),fg="black",width=10,height=1,bd=1,command=Ref)
 ButtonCOUNT.place(x=300,y=500)
 
-buttonRESET=Button(frame_2,text="Reset",bg="seashell",font=("arial",20,"bold"),fg="navyblue",width=10,height=1,bd=1,command=Reset)
+buttonRESET=Button(frame_2,text="Reset",bg="seashell",font=("arial",20,"bold"),fg="black",width=10,height=1,bd=1,command=Reset)
 buttonRESET.place(x=500,y=500)
 
-buttonEXIT=Button(frame_2,text="EXIT",bg="seashell",font=("arial",20,"bold"),fg="navyblue",width=10,height=1,bd=1,command=qExit)
-buttonEXIT.place(x=700,y=500)
+buttonMENU=Button(frame_2,text="MENU",bg="white",font=("arial",20,"bold"),fg="black",width=10,height=1,bd=1,command=show)
+buttonMENU.place(x=700,y=500)
 
-buttonMENU=Button(frame_2,text="MENU",bg="seashell",font=("arial",20,"bold"),fg="navyblue",width=10,height=1,bd=1,command=show)
-buttonMENU.place(x=900,y=500)
+buttonEXIT=Button(frame_2,text="EXIT",bg="red",font=("arial",20,"bold"),fg="white",width=10,height=1,bd=1,command=qExit)
+buttonEXIT.place(x=900,y=500)
+
+
 ########################################################################################################################
 t=time.asctime()
 
-l=Label(frame,text='TIME',font=('arial',20,"bold",'underline'),fg="navyblue",bg="pink")
-l.grid(row=0,column=0)
+#l=Label(root,text='TIME',font=('arial',20,"bold",'underline'),fg="black",bg="lightcoral")
+#l.place(x=950, y=100)
+frame_time = Frame(root, width=500, height=300, bg="lightcoral",bd="5")
+frame_time.place(x=950, y=100)
 
-l0=Label(frame,text=t,font=('arial',17,"bold"),fg="navyblue",bg="pink")
-l0.grid(row=1,column=0)
+l0=Label(frame_time,text=t,font=('arial',17,"bold"),fg="black",bg="white",bd="5")
+l0.place(x=0,y=0)
 
 root.mainloop()
